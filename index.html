@@ -15,20 +15,26 @@
 
 				<!-- Header -->
 					<header id="header">
-									<h1> Portfolio </h1>
 						<div class="content">
 							<div class="inner">
 									<img src="images/Portfolio Picture.png" height="10%" alt="" />
-								<p> Hi, my name is James.</p>
-								<p>	I am currently on my second year of Computer Game Development at Staffordshire University.</p>
-
+									<h3> Hi, my name is James McGowan.</h3>
+									<p>	I am currently on my second year of Computer Game Development at Staffordshire University.</p>
 							</div>
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#work">Work</a></li>
+								<li><a href="#Mario">Mario</a></li>
+								<li><a href="#DNA">DNA</a></li>
+								<li><a href="#TowerDefence">Tower Defence</a></li>
+								<li><a href="#FPS">FPS</a></li>
+							</ul>
+						</nav>
+
+						<nav>
+							<ul>
 								<li><a href="#about">About Me</a></li>
-									<li><a href="#resume">resume</a></li>
+								<li><a href="#resume">resume</a></li>
 								<li><a href="#contact">Contact</a></li>
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -39,36 +45,93 @@
 					<div id="main">
 
 						<!-- Work -->
-							<article id="work">
-								<h2 class="major"> My Work</h2>
-
-								<h3> Pac-Man </h3>
-								<span class="image main"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/G5mwCjvfWTQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-								<p> To add my own twist I started by recreating how Pac-Man looks, I decided to develop my own variation by making Pac-Man eat brains. to do this I changed the dots into brains
-										which the player has to eat to gain a higher score. Once Pac-Man eats all the brains the player wins, if the Pac-Man dies 3 times the player loses.
-										In addition I added in blocks that blocks Pac-Man on the path I created to make the difficulty harder. </p>
-								<p> In addition to this I implemented different movements for the ghosts such as left and rigth whilst also enabling different speed variations. Every time
-										the ghosts bounces of each side of the game screen the speed would increase slightly to make the game become increasingly difficult. </p>
-								<ul type="square">
-									 <li> C++ and ... </li>
-									 <li> 12 weeks development time </li>
-								 </ul>
-
-								<p> <a href="#"> Github Reposotory </a></p></br>
-
-								<h3> Mario </h3>
+							<article id="Mario">
+								<h2 class="major"> Mario </h2>
 								<span class="image main"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/Lg5PharWOEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
 								<p> <a href="#"> Github Reposotory </a></p></br>
 
-								<h3> DNA project</h3>
+							</article>
+
+							<article id="DNA">
+								<h2 class="major"> DNA project </h2>
 								<span class="image main">	<iframe width="100%" height="315" src="https://www.youtube.com/embed/fY_FY8YKPkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+								<p> This was a project that I did in a pair, me and another student decided to create a puzzle game within UE4.
+									 	We started off by putting our ideas forwards and doing research into how to create unblock me puzzles and Simon says.
+									  The first level was a tutorial maze for the player to get used to the controls, we both worked on that splitting up the level design, mechanics and UI.</p>
+
 								<span class="image main"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/A4rOAUzmgbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+									<p> The second level was the level I worked on, this was an unblock me puzzles. I stated by researching into different unblock me puzzles trying to solve them along the way.
+
+									<ul type="square">
+										<li> <h3> Movements </h3> </li>
+										<p> I used the movement form the FPS template in UE4 as all I need was forwards, back, left and right. </p>
+
+									 <li> <h3> 	Moving of blocks </h3> </li>
+									 <p> I started off by creating a pick up system that would allow the player to pick up the blocks and move them around.
+										   I did this with the first person template and the gun that is available.
+										   I create a blueprint that would ray trace and when it hit an object it would attract that the the players gun meaning if they moved around it would follow, to fix this I had to lock the rotation and nonevent in X or Y depending on which way the clock was moving.</p>
+
+		 						   <li> <h3> Building of puzzles </h3> </li>
+									 <p> To create the puzzles I created blocks that was the height of the player and used previously unblock me puzzles to create my own I had to create them then test them to see if they were solve able.
+										   Once I got one puzzle set up I decide to create 3 more each getting harder as the player proceeds.
+											 Once I created all the puzzles I had problem trying to complete them as the blocks where the height of the player.
+											 I decide to shrink the block to a 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach.</p>
+
+									 <li> <h3> Camera angles </h3> </li>
+									 <p> The final thing I added was camera angles above the puzzle so the player could switch to them to see how they are getting on or use it as help to see what they could move next.</p>
+
 								<p> <a href="#"> Github Reposotory </a></p></br>
+							</article>
 
-								<h3> Tower Defence </h3>
+							<article id="TowerDefence">
+								<h2 class="major"> Tower Defence </h2>
 								<span class="image main"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/QKRKXWlfouQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-								<p> <a href="https://github.com/m012343i/TowerDefence"> Github Reposotory </a></p>
+									<p>This was an assignment where I was able to create a tower defence game in a programme of my choice. I decided to do it in UE4 as I have had more experience in it.</p>
 
+							<ul type="square">
+							  <li> <h3> AI </h3> </li>
+									 <p> I started off by creating a AI spawner this would spawn waves of enemies which would run to an end point.
+										   To get them to run I first had to create a runner, this would include a behaviour tree and blackboard.
+											 This would give the AI instruction in what to do, in this case they would run to my end point set up within the spawner.
+											 To create different AI I created a database this would allow me to change the health, speed and the amount of money the player would get if the AI was killed. </p>
+
+							  <li> <h3> Towers </h3> </li>
+									 <p> To create the towers I started by creating a base actor, using a shape as the mesh.
+										   As well as this I added a shooting system that uses a sphere collision to detect when a AI enters, once the AI enters the tower it will begin shooting that target until the target is killed or leaves the collision sphere.
+											  I did this multiple times with different towers to do this I created a database which would allow me to alter the radius, fire rate, cost to place and how much damage the tower will deal to the AI.
+												I also included a homing and non-homing projectile. The homing projectile will hit the AI and never miss, where as the non-homing would hit and cause a splash damage effect. </p>
+
+							 <li> <h3> Mechanics </h3> </li>
+									<p> I had to create a method in order for the player to be able to place towers.
+										  To do this I would do a check to see if there was anything under the mouse, if not the player would be able to place a tower indicated by a green outline of the tower.
+											Whereas if the check comes back with a tower underneath the player won’t be able to place a tower this is then indicated with a red outline of the tower. </p>
+
+							 <li> <h3> Level design </h3> </li>
+									<p> I created 3 levels for my game. I had inspiration from York, Tower bridge and Stonehenge.
+									With the York map I wanted it be close quarter with building hanging over the road and pavement. I also implemented a wall like the one that’s runs near the train station. I added my own features like a water fountain and castle gate.
+									Next I created Tower bridge, this was meant to be easier than the first level as the player could see the AI running at them as they were coming from the opposite side of the bridge.
+									Finally I created Stonehenge this was my hardest level as the AI was coming from every direction. This would mean the player would have to watch behind them at all times.</p>
+
+							 <li> <h3> Money and lives </h3> </li>
+									<p> To create the money and lives I had to create a UI that would display this to the screen. I used the AI spawner system to detect once they had reached the end point by doing this I could then edit the lives of the player.
+										  Once the AI was deleted it would lower the players lives by the amount set in the database.
+								    	This was kind of similar to the money situation, when I was checking if anything was under the mouse, I would take off the money set in the database when the tower was placed.
+											I also did checks to see if the player had enough money to but the towers if not the button wouldn’t work. I added a feature where once the tower is placed they can’t get the money back.
+											For the player to get money I had it set up for when the tower killed an AI they would gain money back also set in the database. </p>
+
+						  <li> <h3> Menu system </h3> </li>
+								  <p> Finally I created a start, pause, round, quit, win and lose screen.
+										  The start screen would allow the player to see the controls on how to play the game, this was also set up within the pause menu in case they forgot and or want a break.
+											The round screens happen before each round, it gives the player time to place down there towers before beginning the round. The quiz screen is used to quit the game.
+											The lose screen happens when the player loses all the lives.
+											The win screen is a bit different as the player has to survive 3 levels with 10 round within and once they complete a level they must find a door to get to the next level and to win. </p>
+					   </ul>
+
+							<p> <a href="https://github.com/m012343i/TowerDefence"> Github Reposotory </a></p>
+					</article>
+
+							<article id="FPS">
+								<h2 class="major"> My Work</h2>
 							</article>
 
 						<!-- About -->
