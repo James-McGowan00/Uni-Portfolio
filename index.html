@@ -48,9 +48,37 @@
 							<article id="Mario">
 								<h2 class="major"> Mario </h2>
 								<span class="image main"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/Lg5PharWOEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-								<p> <a href="#"> Github Reposotory </a></p></br>
+								<p> My second assignment was creating a recreation of an old Mario level from 1983  called Mario’s Cement Factory. </p>
 
-							</article>
+								<h3> Characters </h3>
+								<p> To create Mario and Luigi I first loaded them in from a sprit sheet. I did this by creating a mesh/ texture that would load Mario and Luigi when the game launched.
+										This would allow Mario and Luigi to appear on the screen when the game launched. One change I made to Mario and Luigi was the height of the characters from the original design I made them taller than the original game.
+										I made them move with different key bindings, so 2 people can play at the same time as well as making them face in the direction the player pressed.</p>
+
+								<h3> Movement </h3>
+								<p> I added movement to Mario and Luigi which allows them to both jump and move with individual controls. The jump allows both Mario and Luigi to jump to the next level to avoid the Koppers.
+										With the side to side movement this allows both Mario and Luigi to wrap around the map transporting to the other side.
+										Mario and Luigi both have the ability to hit the POW block in the middle, this would stun the Koppers for a short person of time allowing them to kill them and collect points.
+										Both Mario and Luigi can get hit by the Koppers and eventually die.</p>
+
+								<h3> Sound implementation </h3>
+								<p> To create the sound I used the built in SDL mixer which allowed me to access gMusic, this would then allow me to load in the music file at the launch of the game.
+										The Mario theme tune will play once the player launches the game. This will continuously loop through until the player ends the game. </p>
+
+								<h3> Menu </h3>
+								<p> To create my own title screens I used a screen manager which would load the relevant screen when the player presses a button.
+										To load the different screens I used a texture loader this would look for the image in the file, loading the map and other screen on to the SDL window.
+										Using the screen managed I created a screen with controls on so the player could understand how to move Mario and Luigi.
+										This was also used for the start screen I then further implemented a game over screen.</p>
+
+								<ul type="square">
+									<li> 12 weeks to develop </li>
+									<li> Visual Studio with SDL plugin  </li>
+									<li> C++ </li>
+							 </ul>
+
+							<p> <a href="#"> Github Reposotory </a></p></br>
+						</article>
 
 							<article id="DNA">
 								<h2 class="major"> DNA project </h2>
@@ -62,23 +90,29 @@
 								<span class="image main"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/A4rOAUzmgbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
 									<p> The second level was the level I worked on, this was an unblock me puzzles. I stated by researching into different unblock me puzzles trying to solve them along the way.
 
+									<h3> Movement </h3>
+									<p> I used the movement form the FPS template in UE4 as all I need was forwards, back, left and right. </p>
+
+									<h3> 	Moving of blocks </h3>
+									<p> I started off by creating a pick up system that would allow the player to pick up the blocks and move them around.
+										  I did this with the first person template and the gun that is available.
+										  I create a blueprint that would ray trace and when it hit an object it would attract that the the players gun meaning if they moved around it would follow, to fix this I had to lock the rotation and nonevent in X or Y depending on which way the clock was moving.</p>
+
+		 						  <h3> Building of puzzles </h3>
+								 	<p> To create the puzzles I created blocks that was the height of the player and used previously unblock me puzzles to create my own I had to create them then test them to see if they were solve able.
+										  Once I got one puzzle set up I decide to create 3 more each getting harder as the player proceeds.
+										  Once I created all the puzzles I had problem trying to complete them as the blocks where the height of the player.
+										  I decide to shrink the block to a 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach.</p>
+
+									<h3> Camera angles </h3>
+									<p> The final thing I added was camera angles above the puzzle so the player could switch to them to see how they are getting on or use it as help to see what they could move next.</p>
+
 									<ul type="square">
-										<li> <h3> Movements </h3> </li>
-										<p> I used the movement form the FPS template in UE4 as all I need was forwards, back, left and right. </p>
-
-									 <li> <h3> 	Moving of blocks </h3> </li>
-									 <p> I started off by creating a pick up system that would allow the player to pick up the blocks and move them around.
-										   I did this with the first person template and the gun that is available.
-										   I create a blueprint that would ray trace and when it hit an object it would attract that the the players gun meaning if they moved around it would follow, to fix this I had to lock the rotation and nonevent in X or Y depending on which way the clock was moving.</p>
-
-		 						   <li> <h3> Building of puzzles </h3> </li>
-									 <p> To create the puzzles I created blocks that was the height of the player and used previously unblock me puzzles to create my own I had to create them then test them to see if they were solve able.
-										   Once I got one puzzle set up I decide to create 3 more each getting harder as the player proceeds.
-											 Once I created all the puzzles I had problem trying to complete them as the blocks where the height of the player.
-											 I decide to shrink the block to a 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach.</p>
-
-									 <li> <h3> Camera angles </h3> </li>
-									 <p> The final thing I added was camera angles above the puzzle so the player could switch to them to see how they are getting on or use it as help to see what they could move next.</p>
+ 									 <li> 2 weeks to develop </li>
+ 									 <li> Unreal Engine </li>
+ 									 <li> Blueprints </li>
+									 <li> Working in a pair </li>
+ 								 </ul>
 
 								<p> <a href="#"> Github Reposotory </a></p></br>
 							</article>
@@ -86,63 +120,95 @@
 							<article id="TowerDefence">
 								<h2 class="major"> Tower Defence </h2>
 								<span class="image main"> <iframe width="100%" height="315" src="https://www.youtube.com/embed/QKRKXWlfouQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-									<p>This was an assignment where I was able to create a tower defence game in a programme of my choice. I decided to do it in UE4 as I have had more experience in it.</p>
+									<p> This was an assignment where I was able to create a tower defence game in a program of my choice. I decided to do it in UE4 as I have had the most experience in it.</p>
 
-							<ul type="square">
-							  <li> <h3> AI </h3> </li>
+							    <h3> AI </h3>
 									 <p> I started off by creating a AI spawner this would spawn waves of enemies which would run to an end point.
 										   To get them to run I first had to create a runner, this would include a behaviour tree and blackboard.
 											 This would give the AI instruction in what to do, in this case they would run to my end point set up within the spawner.
 											 To create different AI I created a database this would allow me to change the health, speed and the amount of money the player would get if the AI was killed. </p>
 
-							  <li> <h3> Towers </h3> </li>
+							    <h3> Towers </h3>
 									 <p> To create the towers I started by creating a base actor, using a shape as the mesh.
 										   As well as this I added a shooting system that uses a sphere collision to detect when a AI enters, once the AI enters the tower it will begin shooting that target until the target is killed or leaves the collision sphere.
-											  I did this multiple times with different towers to do this I created a database which would allow me to alter the radius, fire rate, cost to place and how much damage the tower will deal to the AI.
-												I also included a homing and non-homing projectile. The homing projectile will hit the AI and never miss, where as the non-homing would hit and cause a splash damage effect. </p>
+											 I did this multiple times with different towers to do this I created a database which would allow me to alter the radius, fire rate, cost to place and how much damage the tower will deal to the AI.
+											 I also included a homing and non-homing projectile. The homing projectile will hit the AI and never miss, where as the non-homing would hit and cause a splash damage effect. </p>
 
-							 <li> <h3> Mechanics </h3> </li>
+							   <h3> Mechanics </h3>
 									<p> I had to create a method in order for the player to be able to place towers.
 										  To do this I would do a check to see if there was anything under the mouse, if not the player would be able to place a tower indicated by a green outline of the tower.
 											Whereas if the check comes back with a tower underneath the player won’t be able to place a tower this is then indicated with a red outline of the tower. </p>
 
-							 <li> <h3> Level design </h3> </li>
+							   <h3> Level design </h3>
 									<p> I created 3 levels for my game. I had inspiration from York, Tower bridge and Stonehenge.
-									With the York map I wanted it be close quarter with building hanging over the road and pavement. I also implemented a wall like the one that’s runs near the train station. I added my own features like a water fountain and castle gate.
-									Next I created Tower bridge, this was meant to be easier than the first level as the player could see the AI running at them as they were coming from the opposite side of the bridge.
-									Finally I created Stonehenge this was my hardest level as the AI was coming from every direction. This would mean the player would have to watch behind them at all times.</p>
+											With the York map I wanted it be close quarter with building hanging over the road and pavement. I also implemented a wall like the one that’s runs near the train station.
+											I added my own features like a water fountain and castle gate.
+											Next I created Tower bridge, this was meant to be easier than the first level as the player could see the AI running at them as they were coming from the opposite side of the bridge.
+											Finally I created Stonehenge this was my hardest level as the AI was coming from every direction. This would mean the player would have to watch behind them at all times.</p>
 
-							 <li> <h3> Money and lives </h3> </li>
+							   <h3> Money and lives </h3>
 									<p> To create the money and lives I had to create a UI that would display this to the screen. I used the AI spawner system to detect once they had reached the end point by doing this I could then edit the lives of the player.
 										  Once the AI was deleted it would lower the players lives by the amount set in the database.
 								    	This was kind of similar to the money situation, when I was checking if anything was under the mouse, I would take off the money set in the database when the tower was placed.
 											I also did checks to see if the player had enough money to but the towers if not the button wouldn’t work. I added a feature where once the tower is placed they can’t get the money back.
 											For the player to get money I had it set up for when the tower killed an AI they would gain money back also set in the database. </p>
 
-						  <li> <h3> Menu system </h3> </li>
+						     <h3> Menu system </h3>
 								  <p> Finally I created a start, pause, round, quit, win and lose screen.
 										  The start screen would allow the player to see the controls on how to play the game, this was also set up within the pause menu in case they forgot and or want a break.
 											The round screens happen before each round, it gives the player time to place down there towers before beginning the round. The quiz screen is used to quit the game.
 											The lose screen happens when the player loses all the lives.
 											The win screen is a bit different as the player has to survive 3 levels with 10 round within and once they complete a level they must find a door to get to the next level and to win. </p>
-					   </ul>
+
+								 <ul type="square">
+									 <li> 12 weeks to develop</li>
+									 <li> Unreal Engine </li>
+									 <li> Blueprints with AI </li>
+									 <li> Desgin and marketing documents </li>
+									 <li> Web development </li>
+								 </ul>
 
 							<p> <a href="https://github.com/m012343i/TowerDefence"> Github Reposotory </a></p>
 					</article>
 
 							<article id="FPS">
-								<h2 class="major"> My Work</h2>
+								<h2 class="major"> First person shooter </h2>
 							</article>
 
 						<!-- About -->
 							<article id="about">
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<p> I am hard working, resilient and a reliable individual who enjoys each aspect of creating and playing games.
+								 		I spend a majority of my time playing new games which leaves me thinking about the creation I aspire to develop.
+										I enjoy the occasioanl trip to the cinema with my friends and binge watching new TV shows.
+										Being welcomed into a team of developers to further enchance my skills and experience would be an amazing opportunity and one I can't wait! </p>
 							</article>
 
 								<!-- resume -->
 								<article id="resume">
+									<h1> James Roy McGowan </h1>
+									<p> Phone: 07931108068 <br>  Email: james.mcgowan73@gmail.com </p>
+
+									<h2> Profile </h2>
+									<p> I am very passionate about the game industry be it creating my own game, playing upcoming games on a variety of devices or engaging in new advancements in technology such as VR and AR.
+										  I especially enjoy playing games with my friends and usually spend time between lectures on different consoles.
+										  In addition, I enjoy listening to music at the gym and playing football with my friends.</p>
+
+									<h2> Education </h2>
+								  <p>	<strong> Sep 2018 - July 2022 </strong> | Staffordshire University <br> Stoke-On-Trent | BSc (Hons) Computer Games Development </p>
+									<p> <strong> Sep 2016 - July 2018 </strong> | Leeds City College <br> Leeds | Btec Games Development</p>
+
+									<h2> Hard Skills </h2>
+									<p> I have developed a range of skills using multiple software and scripting languages such as: </p>
+										<ul type = "Square">
+											<li> Visual Studio - I have used C++ to create a FPS style game and basic programs. </li>
+											<li> Unreal Engine - </li>
+											<li> HTML5 - </li>
+											<li> Unity - </li>
+										</ul>
+
+
 								</article>
 
 						<!-- Contact -->
@@ -180,59 +246,6 @@
 							<article id="elements">
 								<h2 class="major">Elements</h2>
 
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-
 									<h4>Icons</h4>
 									<ul class="icons">
 										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -250,101 +263,6 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 										<li><a href="#" class="button primary">Default</a></li>
 										<li><a href="#" class="button">Default</a></li>
 									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
 								</section>
 
 								<section>
