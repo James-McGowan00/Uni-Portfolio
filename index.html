@@ -169,6 +169,69 @@
 
 							<article id="FPS">
 								<h2 class="major"> First person shooter </h2>
+								<p> This was my FPS assignment for university. We had to make it in UE4, and we had to use a mixture of blueprints and C++. This was my first time mixing both together.
+
+								<h3> Spawning AI </h3>
+								<p> To create sparing AI I started by making a spawner which would consist of an actor.
+										This would allow me to spawn a certain amount of AI with a certain radius. I set it to loop through until the max number was reached then it would stop.
+										This could be changed within the blueprints. </p>
+
+								<h3> Pickups </h3>
+								<p> To create the picks up I used a mixture of blueprints and C++.
+										I created a base pickup class in C++ that would detect when the player had collided with it. I give it a static mesh that could be edited in blueprint.
+									 	Any other instance of that object would inherit from the base pickup class. Once the player collided with the object it would do something like adjust the players health.
+									 	This would allow me to create a health pickup, speed etc. </p>
+
+							<p>	  The health pickup would allow the player to gain back some health.
+										The health was set in attributes which was a mixture of C++ and blueprints.
+										This would set the players max health which was unchangeable in blueprints.
+										The pickup would gift the player health if they were damaged. If the player wasn’t damaged it would do nothing, however if the player was damaged it would give the player 10 health.
+										This would never go over the set max health in C++. </p>
+
+							<p>	  Another pick up I did was speed; this would change the player speed making them faster for a short period of time.
+										This was done in blueprint but was inheriting from the base pickup class.
+										This would set the player speed from 600 to 1000 for a minute, once the minute was up it would return to 600 again. </p>
+
+							<p>   I also create a double jump pickup for the player.
+										When the player collided with it it would set the max jump to 2 so they could jump twice.
+										Because I implemented this it meant I base my level around it. </p>
+
+							<p>	  Finally, there was a pickup spawner which would spawn the pickups every so often.
+										To do this I had to create a separate class but still using the pickup class. To change it I would add a collision box, a place holder, a spawn location, rotation, movement and a map.
+										This would allow me to attach already made pickup classes. When loaded the pickups would spawn at the spawn location, begin rotating and bouncing up and down.
+										Once the player collided with the collision box it would do as the pickup is set, destroy the actor and place it with a new one so many second later.</p>
+
+							<h3> Jump pad </h3>
+							<p>  For this I reused the base pickup class because it already had overlapping.
+									 I then used blueprints to launch the player up for a certain distance, so the player was able to get to the next level of the game.</p>
+
+						 <h3> Level design </h3>
+						 <p>  I based my level around the ability of double jump and my jump pads.
+							    This allowed me to raise platforms in the air for the player to jump around on.
+							  	I placed important picks ups at these hard to reach places so the player would have to use double jump and jump pads to traverse the level.</p>
+
+						<h3> Weapon </h3>
+						<p> With the weapons we created it all in C++, all I had to do was add a mesh to the object in blueprints.
+								In C++ we created 3 different weapon classes, a base class, a ray trace class and one that shoots projectiles.
+							 	The bass class was just setting up the fire function which would check if left mouse had been pressed, if so, it would then fire nothing.
+							 	The second class would allow me to fire ray traces at objects, if it hit an object it would display the name of it.
+							  Finally, I created a 3rd class this would check if the left mouse has been clicked, if so, it will fire a projectile spawned at the muzzle location.</p>
+
+					 <p>  I further implemented a reload system that would only allow the player to shoot the amount set in the class.
+						 		This would decrease every time the player shoots until zero, once at zero the class will reload the weapon meaning the play can focus on killing the AI.</p>
+
+					<h3> UI </h3>
+					<p> To create the UI I did most of it in C++.
+							I created a base HUD which is where I added the health bar and ammo.
+						 	The C++ program will get the health and convert it into a percentage so it can be used in a percentage bar.
+						 	Whereas for the ammo I had to convert the int into a string so I could display it in the screen.
+						 	When the player loses or gains health it will update the players HUD, this will happen the same with the ammo system.</p>
+
+				 <ul type="square">
+					 <li> 12 weeks to develop</li>
+					 <li> Unreal Engine </li>
+					 <li> Blueprints and C++ mixed </li>
+				</ul>
 							<p>	<a href="https://github.com/m012343i/FPS"> Github Reposotory </a></p>
 							</article>
 
