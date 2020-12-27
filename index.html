@@ -10,77 +10,72 @@
 	</head>
 	<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="content">
-							<div class="inner">
-									<img src="images/Portfolio Picture.png" height="10%" alt="" />
-									<h3> Hi, my name is James McGowan.</h3>
-									<p>	I am currently in my second year of Computer Game Development at Staffordshire University.</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#TowerDefence">Tower Defence</a></li>
-								<li><a href="#FPS">FPS</a></li>
-								<li><a href="#DNA">DNA</a></li>
-								<li><a href="#Mario">Mario</a></li>
-							</ul>
-						</nav>
+      <!-- Header -->
+      <header id="header">
+        <div class="content">
+          <div class="inner">
+            <img src="images/Portfolio Picture.png" height="10%" alt="" />
+            <h3> Hi, my name is James McGowan.</h3>
+            <p>	I am currently in my final year of Computer Game Development at Staffordshire University.</p>
+          </div>
+        </div>
 
-						<nav>
-							<ul>
-								<li><a href="#about">About Me</a></li>
-								<li><a href="#resume">resume & CV</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+        <nav>
+          <ul>
+            <li><a href="#Year1">Year 1</a></li>
+            <li><a href="#Year2">Year 2</a></li>
+            <li><a href="#Year3">Year 3</a></li>
+					</ul>
+        </nav>
 
-				<!-- Main -->
-					<div id="main">
+				<nav>
+          <ul>
+            <li><a href="#about">About Me</a></li>
+						<li><a href="#resume">resume & CV</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<!--<li><a href="#elements">Elements</a></li>-->
+					</ul>
+				</nav>
+      </header>
 
-						<!-- Work -->
-							<article id="Mario">
-								<h2 class="major"> Mario </h2>
-								<span> <iframe width="100%" height="315" src="https://www.youtube.com/embed/Lg5PharWOEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-								<p> Assignment 2 was creating a recreation of an old Mario level from 1983 called Mario’s Cement Factory. </p>
+      <!-- Main -->
+      <div id="main">
+        <!-- Work -->
+        <article id="Year1">
+          <h1 class="major"> Year 1 </h1>
+            <h3 class="major"> A version of Pacman </h3>
 
-								<h3> Characters </h3>
-								<p> Mario and Luigi were created by first loading them in from a sprit sheet by creating a mesh/ texture that would load Mario and Luigi when the game launched.
-										This would allow Mario and Luigi to appear on the screen when the game launched. Amongst many alterations a key alteration made was the height of the characters as they were made to be taller than in the original.
-										They were also made to move with different key bindings, so 2 people can play at the same time as well as making them face in the direction the player pressed.</p>
+            <h3 class="major"> OpenGL game </h3>
 
-								<h3> Movement </h3>
-								<p> Movement was implemented to both Mario and Luigi which allowed them to both jump and move with individual controls.
-										The jump allows both Mario and Luigi to jump to the next level to avoid the Koppers.
-										With the side to side movement this allows both Mario and Luigi to wrap around the map transporting to the other side.
-										Mario and Luigi both have the ability to hit the POW block in the middle, this would stun the Koppers for a short person of time allowing them to kill them and collect points.
-										Both Mario and Luigi can get hit by the Koppers and eventually die.</p>
+            <h3 class="major"> A version of Mario </h3>
+              <p> This was a recreation of an old Mario level from 1983 called Mario’s Cement Factory, which was created in Visual studios with a SDL plugin and C++. This was created over 12 weeks.</p>
+              <span> <iframe width="100%" height="315" src="https://www.youtube.com/embed/Lg5PharWOEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
 
-								<h3> Sound implementation </h3>
-								<p> The sound was created using the built in SDL mixer which allowed access to gMusic, this would then enable the music file to load at the launch of the game.
-										The Mario theme tune will play once the player launches the game.
-										This will continuously loop through until the player ends the game.</p>
+              <h3> Characters </h3>
+              <p> Mario and Luigi are created from the same class. This makes it easier in the future if I decided to add more character to the game.
+                Within this character class it gives the sprite a movement speed, facing direction, which sprite it is loading and jumping. I then create a class that connects to the character for example Mario.
+                This would allow me to assign keys to move Mario around the screen, detect which way the character facing when loading into the game and when a key is pressed. It also allows me to load a sprite for the characters.<br>
 
-								<h3> Menu </h3>
-								<p> To create title screens screen manager was used which would load the relevant screen when the player presses a button.
-										To load the different screens a texture loader was used to look for the image in the file, loading the map and other screen on to the SDL window.
-										Using the screen manager a control screen was created  so the players could understand how to move Mario and Luigi.
-										This was also used for the start screen and game over screen.</p>
+                <br> With the characters having their own class it allow me to assign different key binds to move each character around the screen at the same time, this allows for the game to be multiplayer.
+                The characters also has a fucntion that allow them to collided with the POW block in the middle of the level which will stun the Koppers for a short period of time allowing Mario or Luigi to kill them.
+                If the charatcers are unable to hit the koppers while they are stunned the player will lose a life.
 
-								<ul type="square">
-									<li> 12 weeks to develop </li>
-									<li> Visual Studio with SDL plugin  </li>
-									<li> C++ </li>
-							 </ul>
-						</article>
+              <h3> Sound implementation </h3>
+  					  <p> The sound was created using the built in SDL mixer which allows access to gMusic, this would then enable the music file to load at the launch of the game.
+                The Mario theme tune will play once the player launches the game.
+                The theme tune will continuously loop through until the player quits the game.</p>
 
-							<article id="DNA">
+  					  <h3> Menu </h3>
+              <p> To create the different screens a screen manager class was created. This would load in the relevant screen when the player presses a button or made it to the end.
+                I created different screen which were saved in a file within the project. This would allow me to access these through a texture loader that looked for the name of the picture within the file and load it to the screen.<br>
+                <br> Some exampled of the screen created are the title scree, a contol screen for the player to understand how to play, a win/lose screen and fianlly a game over screen.</p>
+        </article>
+
+
+            <article id="Year2">
 								<h2 class="major"> Student project </h2>
 								<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/fY_FY8YKPkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
 								<p> This project was done in a pair to create a puzzle game within UE4.
@@ -101,9 +96,9 @@
 		 						  <h3> Building of puzzles </h3>
 								 	<p> The puzzles blocks were made to the height of the player.
 										 	They were created and then tested to see if they were solveable.
-											 Once one puzzle was set up 3 more were developed each getting harder as the player proceeds.
-											  Once all the puzzles were made there were a few issues such as problems trying to complete them as the blocks where the height of the player.
-												Through trial and error the blocks were made to 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach.</p>
+											Once one puzzle was set up 3 more were developed each getting harder as the player proceeds.
+											Once all the puzzles were made there were a few issues such as problems trying to complete them as the blocks where the height of the player.
+										  Through trial and error the blocks were made to 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach.</p>
 
 									<h3> Camera angles </h3>
 									<p>  The final thing that was added was camera angles above the puzzle so the player could switch to them to see how they are getting on or use it as help to see what they could move next.</p>
@@ -175,7 +170,7 @@
 							<p> <a href="https://github.com/m012343i/TowerDefence"> Github Reposotory </a></p>
 					</article>
 
-							<article id="FPS">
+							<article id="Year3">
 								<h2 class="major"> First person shooter </h2>
 								<p> This was a First Person Shooter assignment for university. Which had to be made in UE4 using use a mixture of blueprints and C++. </p>
 
