@@ -28,27 +28,27 @@
             <li><a href="#Year1">Year 1</a></li>
             <li><a href="#Year2">Year 2</a></li>
             <li><a href="#Year3">Year 3</a></li>
-					</ul>
+          </ul>
         </nav>
 
-				<nav>
+          <nav>
           <ul>
             <li><a href="#about">About Me</a></li>
 						<li><a href="#resume">resume & CV</a></li>
 						<li><a href="#contact">Contact</a></li>
-						<!--<li><a href="#elements">Elements</a></li>-->
 					</ul>
 				</nav>
       </header>
+
 
       <!-- Main -->
       <div id="main">
         <!-- Work -->
         <article id="Year1">
           <h1 class="major"> Year 1 </h1>
-            <h3 class="major"> A version of Pacman </h3>
+            <!--<h3 class="major"> A version of Pacman </h3>-->
 
-            <h3 class="major"> OpenGL game </h3>
+          <!--  <h3 class="major"> OpenGL game </h3>-->
 
             <h3 class="major"> A version of Mario </h3>
               <p> This was a recreation of an old Mario level from 1983 called Mario’s Cement Factory, which was created in Visual studios with a SDL plugin and C++. This was created over 12 weeks.</p>
@@ -76,109 +76,15 @@
 
 
             <article id="Year2">
-								<h2 class="major"> Student project </h2>
-								<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/fY_FY8YKPkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-								<p> This project was done in a pair to create a puzzle game within UE4.
-										Ideas were first put forwards and research was started into how to create unblock me puzzles and Simon says.
-										The first level was a tutorial maze for the player to get used to the controls.
-										The second level was an unblock me puzzle research was also done to conduct this within the pair. </p>
-
-								<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/A4rOAUzmgbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-									<h3> Movement </h3>
-									<p> The movement from the First Person Shooter template in UE4 was used as basic movements of forwards, back, left and right was all that was needed.</p>
-
-									<h3> 	Moving of blocks </h3>
-									<p> To begin a pick up system was made that would allow the player to pick up the blocks and move them around.
-											This  was created within the first person template and the gun that is available.
-											A blueprint was created that would ray trace and when it hit an object it would attract that to the players gun meaning if they moved around it would follow,
-											to fix this the rotation needed to lock and movement in X or Y depending on which way the player was moving. </p>
-
-		 						  <h3> Building of puzzles </h3>
-								 	<p> The puzzles blocks were made to the height of the player.
-										 	They were created and then tested to see if they were solveable.
-											Once one puzzle was set up 3 more were developed each getting harder as the player proceeds.
-											Once all the puzzles were made there were a few issues such as problems trying to complete them as the blocks where the height of the player.
-										  Through trial and error the blocks were made to 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach.</p>
-
-									<h3> Camera angles </h3>
-									<p>  The final thing that was added was camera angles above the puzzle so the player could switch to them to see how they are getting on or use it as help to see what they could move next.</p>
-
-									<ul type="square">
- 									 <li> 2 weeks to develop </li>
- 									 <li> Unreal Engine </li>
- 									 <li> Blueprints </li>
-									 <li> Working in a pair </li>
- 								 </ul>
-							</article>
-
-							<article id="TowerDefence">
-								<h2 class="major"> Tower Defence </h2>
-								<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/QKRKXWlfouQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-									<p> This was an assignment with the key task of creating a tower defence game in a program of choice.
-										 	For this task UE4 was chosen as the most experience has been gained in it. </p>
-
-							    <h3> AI </h3>
-									 <p> An AI spawner was first created this would spawn waves of enemies which would run to an end point.
-										 	To get them to run a runner was made, this would include a behaviour tree and blackboard.
-										 	This would give the AI instruction in what to do, in this case they would run to the end point set up within the spawner.
-											To create different AI a database was made, this would enable change to the health, speed and the amount of money the player would get if the AI was killed. </p>
-
-							    <h3> Towers </h3>
-									 <p> To create the towers a base actor was implemented, using a shape as the mesh.
-										  	A shooting system was then made that uses a sphere collision to detect when an AI enters, once the AI enters the tower it will begin shooting that target until the target is killed or leaves the collision sphere.
-												This was done multiple times with different towers to do this a database was created which would allow alteration to the radius, fire rate, cost to place and how much damage the tower will deal to the AI.
-												A homing and non-homing projectile as also included in this.
-												The homing projectile will hit the AI and never miss, whereas the non-homing would hit and cause a splash damage effect.  </p>
-
-							   <h3> Mechanics </h3>
-									<p> A method was needed in order for the player to be able to place towers.
-										 	To do this, checks were made to see if there was anything under the mouse, if not the player would be able to place a tower indicated by a green outline around the tower.
-											 Whereas if the check comes back with a tower underneath the player won’t be able to place a tower this is then indicated with a red outline around the tower. </p>
-
-							   <h3> Level design </h3>
-									<p> 3 levels were created for this game.
-										With key inspiration from York, Tower bridge and Stonehenge.
-										With the York map the idea was close quarter with building hanging over the road and pavement.
-										Features like a water fountain and a castle gate were added. Next the Tower bridge was created, this was meant to be easier than the first level as the player could see the AI running at them as they were coming from the opposite side of the bridge.
-										Finally, Stonehenge was made, this was the hardest level as the AI was coming from every direction.
-										This would mean the player would always have to watch behind them.</p>
-
-							   <h3> Money and lives </h3>
-									<p>  To create the money and lives a UI was made that would display this to the screen.
-											The AI spawner system was used to detect once the AI had reached the end.
-										 	When the AI reached the end point, they were deleted from the game to free up memory, it would lower the players lives by the amount set in the database.
-											This was like the money situation, when checking if anything was under the mouse, the money set in the database would be taken off when the tower was placed.
-											Checks were also made to see if the player had enough money to put the towers down.
-											If not, the button wouldn’t work. A feature was added where once the tower is placed, the player can’t get their money back.
-											For the player to get their money the tower would need to kill an AI. </p>
-
-						     <h3> Menu system </h3>
-								  <p> Finally, a start, pause, round, quit, win and lose screen was implemented.
-											The start screen would allow the player to see the controls on how to play the game, this was also set up within the pause menu in case they forgot and or want a break.
-											The round screens happen before each round, it gives the player time to place down their towers before beginning the round.
-											The quit screen is used to quit the game. The lose screen happens when the player loses all their lives.
-											The win screen is a bit different as the player must survive 3 levels with 10 rounds and once they complete a level, they must find a door to get to the next level and to win. </p>
-
-								 <ul type="square">
-									 <li> 12 weeks to develop</li>
-									 <li> Unreal Engine </li>
-									 <li> Blueprints with AI </li>
-									 <li> Desgin and marketing documents </li>
-									 <li> Web development </li>
-								 </ul>
-
-							<p> <a href="https://github.com/m012343i/TowerDefence"> Github Reposotory </a></p>
-					</article>
-
-							<article id="Year3">
-								<h2 class="major"> First person shooter </h2>
-								<p> This was a First Person Shooter assignment for university. Which had to be made in UE4 using use a mixture of blueprints and C++. </p>
+							<h1 class="major"> Year 2 </h1>
+								<h3 class="major"> First-person Shooter </h3>
+									<p> This was a First Person Shooter assignment for university. Which had to be made in UE4 using use a mixture of blueprints and C++. </p>
 
 								<h3> Spawning AI </h3>
 								<p> To create sparing AI a spawner was made which would consist of an actor.
 										This would allow AI to spawn a certain amount with a certain radius.
 										This was set to loop through until the max number was reached then it would stop.
-									 	This could be changed within the blueprints. </p>
+										This could be changed within the blueprints. </p>
 
 								<h3> Pickups </h3>
 								<p> To create the pickups a mixture of blueprints and C++ was used.
@@ -209,11 +115,11 @@
 
 							<h3> Jump pad </h3>
 							<p>  To make this the base pickup class was reused as it would allow overlapping.
-							 		 Blueprints were used to launch the player up for a certain distance, so the player was able to get to the next level of the game. </p>
+									 Blueprints were used to launch the player up for a certain distance, so the player was able to get to the next level of the game. </p>
 
 						 <h3> Level design </h3>
 						 <p>  The level was based around the ability of double jump and jump pads.
-							 		This allowed raised platforms in the air for the player to jump around on.
+									This allowed raised platforms in the air for the player to jump around on.
 									Important pickups were placed at these hard to reach places so the player would have to use double jump and jump pads to traverse the level.</p>
 
 						<h3> Weapon </h3>
@@ -224,7 +130,7 @@
 								 Finally, a 3rd class was made this would check if the left mouse has been clicked, if so, it will fire a projectile spawned at the muzzle location. </p>
 
 					 <p>  Through further implementation a reload system was made that would only allow the player to shoot the amount set in the class.
-						 		This would decrease every time the player shoots until zero, once at zero the class will reload the weapon meaning the play can focus on killing the AI.</p>
+								This would decrease every time the player shoots until zero, once at zero the class will reload the weapon meaning the play can focus on killing the AI.</p>
 
 					<h3> UI </h3>
 					<p>  Most of the UI was created in C++.
@@ -239,6 +145,113 @@
 					 <li> Blueprints and C++ mixed </li>
 				</ul>
 							<p>	<a href="https://github.com/m012343i/FPS"> Github Reposotory </a></p>
+
+								  <h3 class="major"> Racing game </h3>
+
+								<h3 class="major"> Tower Defence </h3>
+								<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/QKRKXWlfouQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+									<p> This was an assignment with the key task of creating a tower defence game in a program of choice.
+											For this task UE4 was chosen as the most experience has been gained in it. </p>
+
+									<h3> AI </h3>
+									 <p> An AI spawner was first created this would spawn waves of enemies which would run to an end point.
+											To get them to run a runner was made, this would include a behaviour tree and blackboard.
+											This would give the AI instruction in what to do, in this case they would run to the end point set up within the spawner.
+											To create different AI a database was made, this would enable change to the health, speed and the amount of money the player would get if the AI was killed. </p>
+
+									<h3> Towers </h3>
+									 <p> To create the towers a base actor was implemented, using a shape as the mesh.
+												A shooting system was then made that uses a sphere collision to detect when an AI enters, once the AI enters the tower it will begin shooting that target until the target is killed or leaves the collision sphere.
+												This was done multiple times with different towers to do this a database was created which would allow alteration to the radius, fire rate, cost to place and how much damage the tower will deal to the AI.
+												A homing and non-homing projectile as also included in this.
+												The homing projectile will hit the AI and never miss, whereas the non-homing would hit and cause a splash damage effect.  </p>
+
+								 <h3> Mechanics </h3>
+									<p> A method was needed in order for the player to be able to place towers.
+											To do this, checks were made to see if there was anything under the mouse, if not the player would be able to place a tower indicated by a green outline around the tower.
+											 Whereas if the check comes back with a tower underneath the player won’t be able to place a tower this is then indicated with a red outline around the tower. </p>
+
+								 <h3> Level design </h3>
+									<p> 3 levels were created for this game.
+										With key inspiration from York, Tower bridge and Stonehenge.
+										With the York map the idea was close quarter with building hanging over the road and pavement.
+										Features like a water fountain and a castle gate were added. Next the Tower bridge was created, this was meant to be easier than the first level as the player could see the AI running at them as they were coming from the opposite side of the bridge.
+										Finally, Stonehenge was made, this was the hardest level as the AI was coming from every direction.
+										This would mean the player would always have to watch behind them.</p>
+
+								 <h3> Money and lives </h3>
+									<p>  To create the money and lives a UI was made that would display this to the screen.
+											The AI spawner system was used to detect once the AI had reached the end.
+											When the AI reached the end point, they were deleted from the game to free up memory, it would lower the players lives by the amount set in the database.
+											This was like the money situation, when checking if anything was under the mouse, the money set in the database would be taken off when the tower was placed.
+											Checks were also made to see if the player had enough money to put the towers down.
+											If not, the button wouldn’t work. A feature was added where once the tower is placed, the player can’t get their money back.
+											For the player to get their money the tower would need to kill an AI. </p>
+
+								 <h3> Menu system </h3>
+									<p> Finally, a start, pause, round, quit, win and lose screen was implemented.
+											The start screen would allow the player to see the controls on how to play the game, this was also set up within the pause menu in case they forgot and or want a break.
+											The round screens happen before each round, it gives the player time to place down their towers before beginning the round.
+											The quit screen is used to quit the game. The lose screen happens when the player loses all their lives.
+											The win screen is a bit different as the player must survive 3 levels with 10 rounds and once they complete a level, they must find a door to get to the next level and to win. </p>
+
+								 <ul type="square">
+									 <li> 12 weeks to develop</li>
+									 <li> Unreal Engine </li>
+									 <li> Blueprints with AI </li>
+									 <li> Desgin and marketing documents </li>
+									 <li> Web development </li>
+								 </ul>
+
+							<p> <a href="https://github.com/m012343i/TowerDefence"> Github Reposotory </a></p>
+
+								  <h3 class="major"> Horror Game </h3>
+
+								  <h3 class="major"> Student project </h3>
+								<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/fY_FY8YKPkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+								<p> This project was done in a pair to create a puzzle game within UE4.
+										Ideas were first put forwards and research was started into how to create unblock me puzzles and Simon says.
+										The first level was a tutorial maze for the player to get used to the controls.
+										The second level was an unblock me puzzle research was also done to conduct this within the pair. </p>
+
+								<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/A4rOAUzmgbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+									<h3> Movement </h3>
+									<p> The movement from the First Person Shooter template in UE4 was used as basic movements of forwards, back, left and right was all that was needed.</p>
+
+									<h3> 	Moving of blocks </h3>
+									<p> To begin a pick up system was made that would allow the player to pick up the blocks and move them around.
+											This  was created within the first person template and the gun that is available.
+											A blueprint was created that would ray trace and when it hit an object it would attract that to the players gun meaning if they moved around it would follow,
+											to fix this the rotation needed to lock and movement in X or Y depending on which way the player was moving. </p>
+
+									<h3> Building of puzzles </h3>
+									<p> The puzzles blocks were made to the height of the player.
+											They were created and then tested to see if they were solveable.
+											Once one puzzle was set up 3 more were developed each getting harder as the player proceeds.
+											Once all the puzzles were made there were a few issues such as problems trying to complete them as the blocks where the height of the player.
+											Through trial and error the blocks were made to 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach.</p>
+
+									<h3> Camera angles </h3>
+									<p>  The final thing that was added was camera angles above the puzzle so the player could switch to them to see how they are getting on or use it as help to see what they could move next.</p>
+
+									<ul type="square">
+									 <li> 2 weeks to develop </li>
+									 <li> Unreal Engine </li>
+									 <li> Blueprints </li>
+									 <li> Working in a pair </li>
+								 </ul>
+
+								  <h3 class="major"> Virutal reality </h3>
+
+
+							</article>
+
+							<article id="Year3">
+								<h1 class="major"> Year 3 </h1>
+								  <h3 class="major"> Spy Force </h3>
+								  <h3 class="major"> Ubiqiuous application </h3>
+								  <h3 class="major"> Group based project </h3>
+								  <h3 class="major"> Final year project </h3>
 							</article>
 
 						<!-- About -->
