@@ -8,8 +8,8 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
 
+	<body class="is-preload">
     <!-- Wrapper -->
     <div id="wrapper">
 			  <!-- Header -->
@@ -26,12 +26,12 @@
 				<div id="header">
 					<nav>
 						<ul>
-							<li><a href="#Year1">Year 1</a></li>
-            	<li><a href="#Year2">Year 2</a></li>
-            	<li><a href="#Year3">Year 3</a></li>
+							<li><a href="#GameEngineCreation"> Mario recreation </a></li>
+            	<li><a href="#GameDevelopment">SixteenB </a></li>
+							<li><a href="#GameEngineProgramming"> FPS </a></li>
+							<li><a href="#MobileDevelopment"> Spy Force </a></li>
 						</ul>
 					</nav>
-
 					<nav>
 						<ul>
 							<li><a href="#about">About Me</a></li>
@@ -44,38 +44,11 @@
 			<!-- Main -->
 			<div id="main">
 				<!-- content -->
-				<article id="Year1">
-					<h1 class="major"> Year 1 </h1>
-            <!--<h3 class="major"> A version of Pacman </h3>-->
+				<article id="GameEngineCreation">
 
-          <!--  <h3 class="major"> OpenGL game </h3>-->
-
-					<h3 class="major"> A version of Mario </h3>
-					<p> This was a recreation of an old Mario level from 1983 called Mario’s Cement Factory, which was created in Visual studios with a SDL plugin and C++. This was created over 12 weeks.</p>
-					<span> <iframe width="100%" height="315" src="https://www.youtube.com/embed/Lg5PharWOEs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-
-					<h3> Characters </h3>
-					<p> Mario and Luigi are created from the same class. This makes it easier in the future if I decided to add more character to the game.
-							Within this character class, it gives the sprite a movement speed, facing direction, which sprite it is loading and jumping. I then created a class that connects to the character for example Mario.
-							This would allow me to assign keys to move Mario around the screen, detect which way the character facing when loading into the game and when a key is pressed. It also allows me to load a sprite for the characters.<br>
-
-					<br> With the characters having their own class it allows me to assign different key binds to move each character around the screen at the same time, this allows for the game to be multiplayer.
-							The characters also has a function that allows them to collide with the POW block in the middle of the level which will stun the Koppers for a short period allowing Mario or Luigi to kill them.
-							If the characters are unable to hit the Koopers while they are stunned the player will lose a life.
-
-					<h3> Sound implementation </h3>
-					<p> The sound was created using the built in SDL mixer which allows access to gMusic, this would then enable the music file to load at the launch of the game.
-							The Mario theme tune will play once the player launches the game.
-							The theme tune will continuously loop through until the player quits the game.</p>
-
-					<h3> Menu </h3>
-					<p> To create the different screens a screen manager class was created. This would load in the relevant screen when the player presses a button or makes it to the end.
-							I created a different screen which was saved in a file within the project. This would allow me to access these through a texture loader that looked for the name of the picture within the file and load it to the screen.<br>
-							<br> Some examples of the screens created are the title screen, a control screen for the player to understand how to play, a win/lose screen and finally a game over screen.</p>
 				</article>
 
-
-				<article id="Year2">
+				<article id="GameDevelopment">
 					<h1 class="major"> Year 2 </h1>
 								<h3 class="major"> First-person Shooter </h3>
 								<p> This first-person shooter game was created in Unreal Engine 4 using a mixture of C++ and blueprints. This was created over 12 weeks and it was the first time at University using UE4.</p>
@@ -144,206 +117,88 @@
 
 						<p>	<a href="https://github.com/m012343i/FPS"> Github Reposotory </a></p>
 
+				</article>
 
-					 <h3 class="major"> Racing game </h3>
-					 <p><em> Coming soon </em> </p>
+				<article id="GameEngineProgramming">
+					<h1 class="major"> Year 3 </h1>
+				</article>
 
+				<article id = "MobileDevelopment">
+					<h1> </h1>
+				</article>
 
-					 <h3 class="major"> Tower Defence </h3>
-					 <span><iframe width="100%" height="315" src="https://www.youtube.com/embed/QKRKXWlfouQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
+				<!-- About -->
+				<article id="about">
+					<h2 class="major">About</h2>
+					<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
+					<p> I am hard working, resilient and a reliable individual who enjoys each aspect of creating and playing games.
+							I spend a majority of my time playing new games which leaves me thinking about the creations I aspire to develop.
+							I enjoy the occasioanl trip to the cinema with my friends and binge watching new TV shows.
+							Being welcomed into a team of developers to further enchance my skills and experience would be an amazing opportunity and one I can't wait to start! </p>
+			 	</article>
 
-					 <p> This was an assignment with the key task of creating a tower defence game in a program of choice.
-							 For this task, UE4 was chosen as the most experience has been gained in it. </p>
+				<!-- resume -->
+		  	<article id="resume">
+					<h1> James McGowan </h1>
+					<h3> Student Game developer </h3>
+					<p>  Email: james.mcgowan73@gmail.com </br>
+						 	My CV: <a href="James McGowan CV2.pdf" download> Download here </p>
 
-					 <p> This set task had the aim of creating a tower defence game in a program of my choice.
-							 I decide to use UE4 as I have the most experience in it and I felt comfortable using the engine.
+					<h2> Profile </h2>
+					<p> I am very passionate about the game industry be it creating my own game, playing upcoming games on a variety of devices or engaging in new advancements in technology such as VR and AR.
+							I especially enjoy playing games with my friends and usually spend time between lectures on different consoles.
+							In addition, I enjoy listening to music at the gym and playing football with my friends.</p>
 
-					 <h3> AI </h3>
-						 <p> The AI spawner was first created. This would spawn waves of enemies which would run towards a set point.
-								 To get them to run, an AI called runner was made, this would include a behaviour tree and blackboard.
-								 This would give the AI instruction in what to do, in this case, they would run to the setpoint set up in the spawner.
-								 To create different AI a database was made, this would enable change to the health, speed and the amount of money the player would get if the AI was killed. </p>
+					<h2> Education </h2>
+					<p>	<strong> Sep 2018 - July 2022 </strong> | Staffordshire University <br> Stoke-On-Trent | BSc (Hons) Computer Games Development </p>
+					<p> <strong> Sep 2016 - July 2018 </strong> | Leeds City College <br> Leeds | Btec Games Development</p>
 
-					 <h3> Towers </h3>
-						 <p> To create the towers a base actor was implemented, using a shape as the mesh.
-								 A shooting system was then made that uses a sphere collision to detect when an AI enters its radius, once the AI enters the tower it will begin shooting at that target until the target is killed or leaves the collision sphere.
-								 This was done multiple times with different towers to do this a database was created which would allow alteration to the radius, fire rate, cost to place and how much damage the tower will deal with the AI.
-								 There were homing and no-homing projectiles. The homing projectile will hit the AI and never miss, whereas the non-homing would hit the AI last position and cause a splash damage effect. </p>
-
-					 <h3> Mechanics </h3>
-						 <p> A mechanic was made in order for the player to place towers.
-								 To do this, checks were made to see if there was anything under the mouse, if not the player would be able to place a tower indicated by a green outline around the tower.
-								 Whereas if the check comes back with an object underneath the mouse the player won’t be able to place a tower this is then indicated with a red outline around the tower. </p>
-
-					 <h3> Level design </h3>
-						 <p> 3 levels were created for this game.
-								 With key inspiration from York, Tower Bridge and Stonehenge.
-								 With the York map, the idea was a close quarter with building hanging over the road and pavement.
-								 Features like a water fountain and a castle gate were added. Tower Bridge was created, this was meant to be an easier level than the first level as the player could see the AI running at them from the other side of the bridge.
-								 Finally, Stonehenge was made, this was the hardest level as the AI was coming from every direction.
-								 This would mean the player would always have to watch behind them.</p>
-
-					 <h3> Money and lives </h3>
-						 <p>  To create the money and lives a UI menu was created that would display these to the screen.
-									The AI spawner would detect when the AI had reached there endpoint.
-									When the AI reached the endpoint, they were deleted from the game to free up memory, it would lower the player's lives by the amount set in the database. <br>
-
-									<br> For the money situation, it would use the tower system to check if anything is below the mouse. The money is set in the database and will be taken off once the player places a tower.
-											 The tower system will also check if the player has enough money to place a tower down.
-											 If not, the button wouldn’t work. A feature was added where once the tower is placed, the player can’t get their money back.
-											 For the player to get their money the tower would need to kill multiple AI. </p>
-
-					 <h3> Menu system </h3>
-					 <p> Finally a menu system was created whihc included a start screen, pause screen, round screen, quit screen and a win lose screen.<br><br>
-						 The start screen would allow the player to see the controls on how to play the game, this was also set up within the pause menu in case they forgot or had a break.<br><br>
-						 The round screens happen before each round, it gives the player time to place down their towers before beginning the round.<br><br>
-						 The quit screen is used to quit the game. The lose screen happens when the player loses all their lives.<br><br>
-						 The win screen is a bit different as the player must survive 3 levels with 10 rounds and once they complete a level, they must find a door to get to the next level and to win. </p>
-
-					<ul type="square">
-						<li> 12 weeks to develop</li>
-						<li> Unreal Engine </li>
-						<li> Blueprints with AI </li>
-						<li> Desgin and marketing documents </li>
-						<li> Web development </li>
-					</ul>
-
-					<p> <a href="https://github.com/m012343i/TowerDefence"> Github Reposotory </a></p>
-
-					<h3 class="major"> Horror Game </h3>
-					<p><em> Coming soon </em> </p>
-
-					<h3 class="major"> Student project </h3>
-					<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/fY_FY8YKPkM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-					<p> This project was done in a pair to create a puzzle game within Unreal Engine 4.
-							We had some ideas and narrowed it down to different puzzle games. We created 3 levels, a maze, unblock me and a simons says.
-							The first level was a tutorial level which would allow the player to get used to the controls.
-							The second level was an unblock me puzzle which would use the FPS gun to attach an object to it so the player could move them around.
-							The final level was the simons says. The player would go up to stalls and press a button to interact. If pressed in the right order it would open a final door.
-							<br><br>
-
-							I created the unblock me puzzel and I began doing reseach into how to use raycast to attach an object to the FPS gun.</p>
-				<span><iframe width="100%" height="315" src="https://www.youtube.com/embed/A4rOAUzmgbE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></span>
-
-				<h3> Movement </h3>
-					<p> The movement from the First Person Shooter template in UE4 was used as basic movements of forwards, back, left and right was all that was needed.</p>
-
-				<h3> 	Moving of blocks </h3>
-					<p> To begin, a pick up system was made that would allow the player to pick up the blocks and move them around.
-							This was created within the first-person template and the gun that is available.
-							A blueprint was created that would shoot a ray trace out of the pre-existing gun towards the moveable objects.
-							If the player moved around the blocks would follow them. To fix this the rotation of the blocks needed fixing and the movement in X or Y depending on which way the blocks move.</P>
-
-			 <h3> Building of puzzles </h3>
-				<p> The puzzles blocks were created to the height of the player, this would make it harder for the player to see the solution.
-						Once one puzzle was set up 3 more were developed each getting harder as the player proceeds.
-						Once all the puzzles were made there were a few issues such as problems trying to complete them as the blocks were the height of the player.
-						Through trial and error, the blocks were made to 1/3 of the size so the player would be able to jump into the centre of the puzzle and move blocks that were harder to reach in the middle.</p>
-
-			<h3> Camera angles </h3>
-				<p> Originally the cameras were added above the puzzles to help the player move the blocks and plan their next moves but since changing the size of the blocks the camera angles are no longer needed.</p>
-
-						<ul type="square">
-							<li> 2 weeks to develop </li>
-							<li> Unreal Engine </li>
-							<li> Blueprints </li>
-							<li> Working in a pair </li>
+			  	<h2> Hard Skills </h2>
+					<p> I have developed a range of skills using multiple softwares and scripting languages such as: </p>
+						<ul type = "Square">
+							<li> Visual Studio - I have used C++ to create a FPS style game and basic programs. </li>
+							<li> Unreal Engine - I have used blueprints and C++ together to make a FPS game. I also have used blueprints within my DNA project which was out of University.
+								 	I did this with another student and I have just finished a tower defence style game. </li>
+							<li> HTML5 - I have had experience using Notepad++, Atom.io, JavaScript and Dreamweaver to build websties and develop my skills. </li>
+							<li> Unity - I am currently using Unity to write actions scripts for my VR game, as well as learing the engine for my racing game. </li>
 						</ul>
 
-					<h3 class="major"> Virutal reality </h3>
-						<p><em> Coming soon </em> </p>
+					<h2> soft Skills </h2>
+					<p> I have developed the skills to create my own documentation such as design document, marketing plans and weekly forum posts.
+							This has enabled me to desgin any game specifically for certain audiances and it has helped me develop my understanding of the procces of making a game.
+							I am currently using GitHub for version control so that i am able to go back to previous version and make changes to my game. </p>
 
+						<h2> Experiences </h2>
+					<strong> Conferences </strong>
+					<p>  I have been to the Uki student Conferences for the last 2 years.
+						 	This is where I was spoken to by current game developers and people working in the game industry about there experiences and game they have worked on.</p>
 
+						 <strong> GameJam </strong>
+					<p> I have participated in a GameJam where me and my team created a world war like maze. We had a short amount of tiem to make the game but at the end we presented it to someone from codemasters. </p>
 				</article>
 
-				<article id="Year3">
-					<h1 class="major"> Year 3 </h1>
-					<p> The projects below are currently in development and will be updated accordingly. </p>
-						<h3 class="major"> Spy Force </h3>
-						<h3 class="major"> Ubiqiuous application </h3>
-						<h3 class="major"> Group based project </h3>
-						<h3 class="major"> Final year project </h3>
+				<!-- Contact -->
+				<article id="contact">
+					<h2 class="major">Contact</h2>
+					<p> Email: <a href="mailto:james.mcgowan73@gmail.com"> james.mcgowan73@gmail.com </a>
+					<br> <a href="https://www.linkedin.com/in/james-mcgowan-903135167"> Linkedin </a></p>
 				</article>
-
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p> I am hard working, resilient and a reliable individual who enjoys each aspect of creating and playing games.
-								 		I spend a majority of my time playing new games which leaves me thinking about the creations I aspire to develop.
-										I enjoy the occasioanl trip to the cinema with my friends and binge watching new TV shows.
-										Being welcomed into a team of developers to further enchance my skills and experience would be an amazing opportunity and one I can't wait to start! </p>
-							</article>
-
-								<!-- resume -->
-								<article id="resume">
-
-
-									<h1> James McGowan </h1>
-									<h3> Student Game developer </h3>
-									<p>  Email: james.mcgowan73@gmail.com </br>
-									 		 My CV: <a href="James McGowan CV2.pdf" download> Download here </p>
-
-									<h2> Profile </h2>
-									<p> I am very passionate about the game industry be it creating my own game, playing upcoming games on a variety of devices or engaging in new advancements in technology such as VR and AR.
-										  I especially enjoy playing games with my friends and usually spend time between lectures on different consoles.
-										  In addition, I enjoy listening to music at the gym and playing football with my friends.</p>
-
-									<h2> Education </h2>
-								  <p>	<strong> Sep 2018 - July 2022 </strong> | Staffordshire University <br> Stoke-On-Trent | BSc (Hons) Computer Games Development </p>
-									<p> <strong> Sep 2016 - July 2018 </strong> | Leeds City College <br> Leeds | Btec Games Development</p>
-
-									<h2> Hard Skills </h2>
-									<p> I have developed a range of skills using multiple softwares and scripting languages such as: </p>
-										<ul type = "Square">
-											<li> Visual Studio - I have used C++ to create a FPS style game and basic programs. </li>
-											<li> Unreal Engine - I have used blueprints and C++ together to make a FPS game. I also have used blueprints within my DNA project which was out of University.
-												 	 I did this with another student and I have just finished a tower defence style game. </li>
-											<li> HTML5 - I have had experience using Notepad++, Atom.io, JavaScript and Dreamweaver to build websties and develop my skills. </li>
-											<li> Unity - I am currently using Unity to write actions scripts for my VR game, as well as learing the engine for my racing game. </li>
-										</ul>
-
-								<h2> soft Skills </h2>
-								<p> I have developed the skills to create my own documentation such as design document, marketing plans and weekly forum posts.
-								 		This has enabled me to desgin any game specifically for certain audiances and it has helped me develop my understanding of the procces of making a game.
-										I am currently using GitHub for version control so that i am able to go back to previous version and make changes to my game. </p>
-
-								<h2> Experiences </h2>
-								<strong> Conferences </strong>
-								<p>  I have been to the Uki student Conferences for the last 2 years.
-										 This is where I was spoken to by current game developers and people working in the game industry about there experiences and game they have worked on.</p>
-
-								<strong> GameJam </strong>
-								<p> I have participated in a GameJam where me and my team created a world war like maze. We had a short amount of tiem to make the game but at the end we presented it to someone from codemasters. </p>
-								</article>
-
-
-
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<p> Email: <a href="mailto:james.mcgowan73@gmail.com"> james.mcgowan73@gmail.com </a>
-							  <br> <a href="https://www.linkedin.com/in/james-mcgowan-903135167"> Linkedin </a></p>
-							</article>
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-					<!-- <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
-					</footer>
-
 			</div>
 
+			<!-- Footer -->
+			<footer id="footer">
+				<!-- <p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p> -->
+			</footer>
+		</div>
+
 		<!-- BG -->
-			<div id="bg"></div>
+		<div id="bg"></div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</body>
 </html>
