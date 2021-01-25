@@ -44,83 +44,82 @@
 			<!-- Main -->
 			<div id="main">
 				<!-- content -->
-				<article id="GameEngineCreation">
 
+				<article id="GameEngineCreation">
+					<h1> Mario recreation </h1>
 				</article>
 
 				<article id="GameDevelopment">
-					<h1 class="major"> Year 2 </h1>
-								<h3 class="major"> First-person Shooter </h3>
-								<p> This first-person shooter game was created in Unreal Engine 4 using a mixture of C++ and blueprints. This was created over 12 weeks and it was the first time at University using UE4.</p>
-								<p> <em> A video of the game will appear here soon.</em> </p>
-
-								<h3> Spawning AI </h3>
-								<p> To create AI, a spawner was made which would consist of an actor.
-										This would allow AI to spawn a certain amount within a set radius that can be changed in development.
-										This used a For loop to loop through the AI until it reached the max number I set and it would stop spawning.
-										Both these values can be changed in blueprints. </p>
-
-								<h3> Pickups </h3>
-								<p> A base pickup class was made in C++ that would detect when the player had collided with it.
-										A static mesh was given so the player could see the spawner.
-										Any instance of this object would inherit from the base pickup class.
-										Once the player collided with the object it would adjust the player's health.
-										This would allow different pickups like health, speed etc. </p>
-
-										<h5> Health Pickup </h5>
-										<p>	The health pickup would allow the player to gain back some health.
-											The health was set in attributes which was a mixture of C++ and blueprints.
-											It would set the player's max health which was unchangeable in blueprints.
-											The pickup would gift the player 10 health if they were damaged.
-											The player's health would never go over the max health set in C++. </p>
-
-									 <h5> Speed Pickup </h5>
-									 <p>	Another pick up was speed; this would change the player speed making them faster for a short period of time.
-										 This was done in blueprint but was inherited from the base pickup class.
-										 This would set the player speed from 600 to 1000 for a minute, once the minute was up it would return to 600 again. </p>
-
-									<h5> Double Jump Pickup </h5>
-									<p> A double jump pickup for the player was also made. When the player collided with it would set the max jump to 2 so they could double jump.  </p>
-
-									<h5> Pickup Spawner </h5>
-									<p> Finally, there was a pickup spawner which would spawn the pickups every so often.
-										A separate class was made for this but still using the base pickup class.
-										To change it a collision box would be made along with a place holder, a spawn location, rotation, movement and a map.
-										This would allow to attach already made pickup classes. When loaded the pickups would spawn at the spawn location, begin rotating and bouncing up and down.
-										Once the player collided with the collision box it would do as the pickup is set, destroy the actor and place it with a new one so many seconds later.</p>
-
-							<h3> Jump pad </h3>
-							<p> To make this the base pickup class was reused as it would allow overlapping.
-								 	Blueprints were used to launch the player up for a certain distance, so the player was able to get to the next level of the game. </p>
-
-					 		<h3> Level design </h3>
-					 		<p> The level was based around the ability of double jump and jump pads.
-									This allowed raised platforms in the air for the player to jump too.
-									Important pickups were placed at these hard to reach places so the player would have to use double jump and jump pads to traverse the level.</p>
-
-							<h3> Weapon </h3>
-							<p> The weapons were created all in C++. A mesh was added to the object in blueprints.
-							 	In C++ we created 3 different weapon classes, a base class, a ray trace class and a projectile class.
-							 	The bass class was just setting up the fire function which would check if the left mouse had been pressed if so, it would then fire.
-							 	The second class would allow firing ray traces at objects if it hit an object it would display the name of it.
-							 	Finally, a 3rd class was made this would check if the left mouse has been clicked if so, it will fire a projectile spawned at the muzzle location.<br>
-
-								<br> Through further implementation a reload system was made that would only allow the player to shoot the amount set in the class.
-							 	This would decrease every time the player shoots until zero, once at zero the class will reload the weapon meaning the player can focus on killing the AI.</p>
-
-						<h3> UI </h3>
-						<p> Most of the UI was created in C++.
-								A base HUD was made which is where the health bar and ammo would display.
-								C++ program will get the health and convert it into a percentage so it can be used in a percentage bar.
-								Whereas for the ammo It was converted into a string so it could display on the screen.
-								When the player loses or gains health it will update the player's HUD, this will happen the same with the ammo system.</p>
-
-						<p>	<a href="https://github.com/m012343i/FPS"> Github Reposotory </a></p>
-
+					<h1> SixteenB </h1>
 				</article>
 
 				<article id="GameEngineProgramming">
-					<h1 class="major"> Year 3 </h1>
+					<h1> First-person shooter</h1>
+
+						<p> This was a first-person game created in unreal engine with a mixture of C++ and blueprints that was created over a period of 12 weeks.  </p>
+
+					<h3> Health System </h3>
+						<p> A health system was created that would allow the player to take damage when colliding with the  AI.
+							  This system would also allow the player to pick up health packs around the game world that would increase the player's health a certain amount.
+								This health system is linked to the HUD this would update when the player either got hit by the AI or collided with a health pack.</p>
+
+						<p> The health system was created in C++ and it started by creating some attributes for the player like health and speed. 2 functions were created, the first functions would allow the player to take damage when hit by AI or a pain volume this would then update the HUD showing the player the damage they have taken.
+							  The 2nd function was recover health that would add back health to the player when colliding with a health pack.
+								If the player's health is lower than a set max health the player could gain health otherwise it would add up to the set max health.
+								The reason why it was done in C++ than blueprints was because it was more efficient when playing the game as it is run in the background meaning it will not slow the game. </p>
+
+					<h3> Pickup system </h3>
+						<p> To use the health system a pickup system was needed to be created first.
+								This class was created with a box and mesh, to begin with.
+								In C++, an overlap function was created that would detect if the player has entered a sphere collision.
+								If the player entered this collision it would call the blueprints that are linked.
+								This allowed for further development of pickups like health, speed, and double jump. </p>
+
+						<p> The pickup system was created in C++ because it contained multiple pickups and it was easier to pull from one call than create multiple classes for different pickups.
+								Functions were created in C++ like AddAmmo that would affect the player ammo when they shot a bullet, and it would update in the function.
+								Blueprints were then used to take this function and cast it to the player and update the HUD when the player shot, giving them an indication of how many bullets they have left.
+								Because of the way the base pickup was set up it would allow for other functions like speed, health, and double jump to be created and then cast to the character. </p>
+
+					<h3> HUD System </h3>
+						<p> The HUD system allows the player stats to be displayed to the screen like the health, ammo, and speed.
+								Originally a HUD was created in University which was taken and adjusted to fit this game.
+								A function was created which would handler everything that was being added to the player viewport. </p>
+
+						<p> To update the health to variables were created a max health and current health.
+								This would take away the current health from the max health to create a percentage that works with the health bar.
+								This would load on the load up of the game.
+								This was done in C++ as it allows multiple UI elements to run through a function, it also allows access for more UI elements in the future.
+								All that is needed is that the UI element has a widget created and is linked in the C++.  </p>
+
+					<h3> AI Spawner </h3>
+						<p> Once the HUD was completed an AI spawner was created this would allow engines to spawn around the game world that would track the player everywhere they would go.
+								This was done by using a Nav-mesh of the game world this would allow the AI to roam around in this area.
+								Built into the AI was a system that would damage the player when hit by an AI, this could be set within the editor to make it easier for testing purposes.
+								The AI amount was also able to be adjusted within the editor to make it harder or easier for the player.  </p>
+
+						<p> Originally there were about 100 AI spawning at after each other and this was a problem as the computer couldn't keep up with that the amount of AI and it was hard for the player to kill all these AI even when they were 1 shot kills.
+							 	The AI spawner was created in blueprints as a testing purpose but never evolved from that into C++.  </p>
+
+						<p> The AI was created with the preset third person character in UE4 which would take its commands from an AI controller.
+								Linked to that was a blackboard which contained a key for example the player.
+								Next step was creating a behaviour tree which would tell the AI what to do and where it is going.
+								Using the key that was made in the blackboard the AI would move to the player wait a couple of seconds and move again, this was repeated by the AI until they died or the player died.  </p>
+
+					<h3> Menu System </h3>
+						<p> The last thing that was created was a menu system as the mechanics of the game was most important.
+								This system would allow the player to enter the game, quit the game or pause the game.
+								The system started with a base widget class built-in C++ that was able to be duplicated and the code changed to fit the menu that was needed.
+								The first menu was the start screen this consisted of a title and 2 buttons, a play and a quit button.
+								The start button will start the game and it would remove the current menu from the screen throwing the player into the game.
+								The quit button will exit the application. </p>
+
+						<p> Another menu that was created was a pause menu that would allow the player to pause the game if they are having a break or stuck.
+								This was linked the P button on the keyboard which would stop the game time and pop up a menu, that consisted of a resume button and menu button.
+								The resume button would set the game time back to 1 and remove the widget from the screen.
+								The menu button would quit the game and remove the current widget and add the menu widget back.
+								The next menu was a win or lose condition, this would check to see if the player had lost all their health or to see if they had killed all the AI which would open up a door within the level the player would need to find to win the game.  </p>
+
+						<p>	<a href="https://github.com/m012343i/FPS"> GitHub Reposotory </a></p>
 				</article>
 
 
