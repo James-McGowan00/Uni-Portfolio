@@ -47,10 +47,55 @@
 
 				<article id="GameEngineCreation">
 					<h1> Mario recreation </h1>
+
+					<iframe width="100%" height="500" src="https://www.youtube.com/embed/Lg5PharWOEs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+						<p> This project was a replica creation of a beloved Mario level.
+								It was created in visual studio using C++ and an SDK add on called SDL.
+								This SDK allows the creation of a window that can allow a game to be created like Mario it would also allow keyboard inputs like WASD. </p>
+
+					<h3> Characer</h3>
+						<p> The main thing that was created was a Character.h class this would include a collision, a bool checking if the character is moving left or right, a 2D texture loader and movement.
+								These were set in the character.cpp and would be used in other characters like Mario and Luigi by inheriting form the character.h class. </p>
+
+						<p> In the Mario and Luigi class, they contain code that will detect when the player is pressing WASD or the 4 directional keys.
+								If the player presses A or D the class will detect this and make the character face in that direction.
+								The characters can wrap around the screen by using the window boundary and adding extra pixels to make it look natural. </p>
+
+						<p> Mario and Luigi have extra code that would allow then to have lives, this is set to 3 and when the player is hit by a Koppar either Mario or Luigi will lose a life until they are out of lives and hit the game over screen. </p>
+
+					<h3> Texture Loader </h3>
+						<p> Once the movement had been created for the character a texture now needed to be loaded into the screen.
+								This started as a texture loader which would look in specific files to find textures that were being added to the game like Mario, Luigi and Koppa.
+								These textures were usually on a sprite sheet that could have multiple images like the POW block.
+								To get all the sprite it would divide the sprite sheet up to 3 because they are all in a row.</p>
+
+						<p> Next was the renderer function this would take what the texture loader loaded in and display it to the game screen.
+								This was used mainly for the menu as it would load in the menus when a button was pressed like the start.  </p>
+
+					<h3> Koppa </h3>
+						<p> The Koopa class uses the same class as Mario and Luigi as the renderer needs to be told which way the Koppas are facing, so it can switch the sprite when the Koppa changes direction.
+								However, the Koppas aren’t able to be controlled but they are spawned continuously in either direction.
+								Within the code, the Koppa is given a direction and speed to move at the Koppa will keep moving until they die, stunned or reach the end of the map and be deleted to keep the CPU usage down. </p>
+
+						<p> A function that the Koppas has it to deal damage to either Mario or Luigi.
+								The Koppas will have to hit Mario or Luigi to cause damage and the characters are set back at their starting location.
+								This uses the first sprite on the sprite sheet which is set to a variable that is called later when the Koppas are spawned. </p>
+
+					<h3> POW block </h3>
+						<p> The POW block is used within the game to stun the Koppas for a short period of time.
+								When the Koppas are stunned the player can jump on the bellies of the enemies and destroy them gaining points.
+								After the short period of time, the enemies will begin moving again to there end destination.</p>
+
+						<p> The player is given 3 hits on the POW block after each hit the POW block updates it sprite sheet.
+								After the 3rd hit the block will disappear and reappear after a short period of time.
+								This part of the POW block makes it interesting when 2 players are playing trying to reach the highest score to win.</p>
 				</article>
 
 				<article id="GameDevelopment">
 					<h1> SixteenB </h1>
+
+					<iframe width="100%" height="500" src="https://www.youtube.com/embed/N1DvDXdeRDw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 						<p> This was a group project consisting of 4 members each studying game development and all having a different experience and ideas.
 								It was created in UE4 and consisted of both C++ and blueprints with a development time of 12 weeks.
